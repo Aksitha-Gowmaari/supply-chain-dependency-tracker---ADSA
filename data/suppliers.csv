@@ -1,5 +1,5 @@
 id,name,tier,has_backup
-"MFG+EA2:E55","Apex Motors (Main Manufacturer)",0,TRUE
+"MFG","Apex Motors (Main Manufacturer)",0,TRUE
 "BP","Battery Pack Division",1,TRUE
 "PT","Powertrain Systems",1,TRUE
 "CH","Chassis & Suspension Group",1,TRUE

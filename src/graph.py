@@ -183,10 +183,18 @@ def load_graph_from_csv(suppliers_csv_path, dependencies_csv_path):
                 == "true"
             )
 
+            raw_id = row["id"].strip()
+            supplier_id = raw_id.split("+")[0].strip()
+            tier_val = row.get("tier", "").strip()
+            try:
+                tier_val = int(tier_val)
+            except (ValueError, TypeError):
+                pass
+
             graph.add_supplier(
-                supplier_id=row["id"].strip(),
+                supplier_id=supplier_id,
                 name=row.get("name", "").strip(),
-                tier=row.get("tier", "").strip(),
+                tier=tier_val,
                 has_backup=has_backup,
             )
 
